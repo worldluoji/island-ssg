@@ -1,3 +1,4 @@
-export default {
-    a: 1
-}
+import { defineConfig } from '../dist/index.mjs';
+export default defineConfig({
+    title: 'hello'
+});
