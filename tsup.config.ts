@@ -1,10 +1,15 @@
 import { defineConfig } from 'tsup';
 
 export default defineConfig({
-  entryPoints: ["./src/node/cli.ts", "./src/node/index.ts"],
+  entryPoints: {
+    cli: './src/node/cli.ts',
+    index: './src/node/index.ts',
+    dev: './src/node/dev.ts' // dev.ts 文件进行单独打包
+  },
   clean: true, // 清空之前的构建产物
   bundle: true,
   splitting: true,
+  minify: process.env.NODE_ENV === 'production',
   outDir: 'dist',
   format: ['cjs', 'esm'],
   dts: true,

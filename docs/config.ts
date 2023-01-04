@@ -1,6 +1,6 @@
 import { defineConfig } from '../dist/index.mjs';
 export default defineConfig(
   {
-    title: 'hello'
+    title: 'hello ssg'
   }
 );
